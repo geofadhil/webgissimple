@@ -1,0 +1,275 @@
+/* =============================
+   Style Kerangka Secara Umum
+   ============================= */
+   html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    caret-color: transparent;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================
+   Header dan Logo
+   ============================= */
+#navbar {
+    background-color: #0c85ff;
+    color: #E8EBD2;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 2px solid #333;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* =============================
+   Navigasi
+   ============================= */
+header nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav a {
+    color: #E8EBD2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    background-color: #f0ff1d;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* =============================
+   Hero Section
+   ============================= */
+
+.hero-section { 
+    margin-top: 60px; /* Adjust margin to make room for fixed navbar */ 
+    background-image: url('https://www.tripsavvy.com/thmb/SOnmosQsIiXiHzNonv2BDMGC4n0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1004877052-58ce1095ed954946a94477fb25766c0f.jpg'); /* Replace 'city-background.jpg' with your image */ 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center; 
+} 
+ 
+.hero-content { 
+    max-width: 1800px; 
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #E8EBD2; 
+} 
+
+/* Map Section */ 
+#map { 
+    width: 95%; 
+    height: 800px; 
+    background-color: lightgray; 
+    margin: 40px auto; /* Adjusted margin for space */ 
+    border: 2px solid #ccc; /* Add a border with a subtle color */ 
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative; /* Relative positioning for child elements */ 
+    z-index: 1; /* Set z-index to be behind the header */ 
+} 
+
+  
+
+ 
+#map-section h2 { 
+    text-align: center; 
+    margin-top: 20; 
+    font-size: 28px; 
+    margin-bottom: 20px; 
+}
+
+/* Data Section Styles */ 
+/* =============================
+   Data Section
+   ============================= */
+   #data-section {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#data-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#data-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.column {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.data-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.data-item:hover {
+    transform: translateY(-5px);
+}
+
+.data-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.description {
+    padding: 20px;
+    text-align: left;
+}
+
+.description h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #222;
+}
+
+.description p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Author Section */ 
+#author-section { 
+    background-color: #E8EBD2; 
+    padding: 40px 20px; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: justify; 
+} 
+ 
+.author-content { 
+    max-width: 800px; 
+    margin: 0 auto; 
+} 
+ 
+.author-content h2 { 
+    text-align: center; 
+} 
+ 
+.author-name { 
+    text-align: center; /* Center-align only the author's name */ 
+} 
+ 
+.profile-picture { 
+    height: 100px; 
+    width: auto; 
+    border-radius: 50%; 
+    margin: 0 auto 20px; /* Center the picture horizontally and add margin at the bottom */ 
+    display: block; /* Ensure it behaves as a block element */ 
+} 
+ 
+#footer { 
+    background-color: #0f7ae6; 
+    color: #E8EBD2; 
+    text-align: center; 
+    padding: 20px; 
+    font-family: 'Montserrat', sans-serif; 
+    flex-shrink: 0; 
+} 
+
+.info.legend {
+    background: white;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
